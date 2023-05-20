@@ -145,7 +145,7 @@ section.content.reservas {
 }
 
 section.content.reservas .container-text {
-    padding: 48px 0px 48px 96px;
+    padding: 48px 96px;
     background-color: var(--accent-color);
     display: grid;
     gap: 12px;
