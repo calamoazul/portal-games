@@ -57,6 +57,7 @@ header {
     padding: 0px 20px;
     height: 96px;
     position: relative;
+    text-transform: uppercase;
 }
 
 header .brand {

@@ -5,7 +5,7 @@ get_template('header');
 <main class="main-content">
     <section class="hero-home">
         <h1 class="text-hero">
-            Game Portal
+            Portal Games            
         </h1>
     </section>
     <section class="content main-games">
@@ -27,7 +27,7 @@ get_template('header');
         </div>
     </section>
     <section class="content nosotros">
-        <h2 class="text-center"></h2>
+        <h2 class="text-center">Sobre Nosotros</h2>
         <div class="container-iconos">
             <div></div>
             <div></div>

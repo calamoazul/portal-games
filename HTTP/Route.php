@@ -1,6 +1,7 @@
 <?php
-namespace HTTP;
-
+namespace Calamo\HTTP;
+use Calamo\HTTP\Helpers\Router;
+use Calamo\HTTP\Request;
 /**
  * Clase para gestionar peticiones HTTP
  * 
@@ -58,9 +59,16 @@ namespace HTTP;
          */
         $method = $options[1];
 
+        /**
+         * Datos de la Request
+         * @var Calamo\HTTP\Request
+         */
+        
+        $request = new Request($_POST);
+
         if($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === $uri):
             http_response_code(200);
-            return $class::$method();
+            return $class::$method($request);
         endif;
     }
 

@@ -5,13 +5,16 @@
  * Función para cargar vistas
  * 
  * @param string $name_view Nombre de la vista
+ * @param mixed $data Datos a cargar en la vista
  * @return void
  */
 
- function get_view(string $name_view):void {
+ function get_view(string $name_view, mixed $data = null) {
 
     $file = 'views/' . $name_view . '.php';
-
+    if(is_array($data)):
+      extract($data);
+    endif;
     if(file_exists($file)):
         require_once $file;
     endif;

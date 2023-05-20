@@ -1,7 +1,7 @@
    
         <footer class="flex-center">
             <div class="second-footer flex-center w-full">
-                <p>Portal Games</p>
+                <p>©<?= date('Y'); ?> Portal Games</p>
                 <ul class="menu">
                     <li><a href="/politica-privacidad">Política de Privacidad</a></li>
                     <div class="separator-menu-footer">|</div>

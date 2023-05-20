@@ -66,4 +66,43 @@ class Database{
         
         return $result;
     }
+
+    /**
+     * Método para guardar registros en la base de datos
+     * 
+     * @param string $table Nombre de la base de datos
+     * @param mixed $data Datos a guardar
+     * @return mysqli_result 
+     */
+
+    public function save($table, $data){
+
+        /**
+         * Nombres de las columnas de las bases de datos
+         * @var array
+         */
+        $keys = [];
+
+        /**
+         * Valores a insertar en la base de datos
+         * @var array
+         */
+        $values = [];
+
+        foreach($data as $key => $value) {
+            array_push($keys, $key);
+            array_push($values, $value);
+        }
+
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+
+        $sql = 'INSERT into ' . $table . ' (' . implode(',', $keys)
+        . ' ) values ( '. implode(',', $values) . ')';
+
+        mysqli_query($connection, $sql);
+
+        mysqli_close($connection);
+
+
+    }
 }

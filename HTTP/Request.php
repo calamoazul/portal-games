@@ -1,6 +1,6 @@
 <?php
 
-namespace HTTP;
+namespace Calamo\HTTP;
 
 /**
  * Clase para gestionar las peticiones
@@ -20,4 +20,19 @@ class Request {
         $this->data = $data;
 
     } 
+
+    /**
+     * Método para validar datos de la request
+     * 
+     * @param array|false $data datos a validar
+     * @return array
+     */
+
+    public function validate($data = false):array {
+        
+        $validate_data = [];
+        foreach($data as $key => $value):
+        endforeach;
+        return $validate_data;
+    }
 }
